@@ -1,179 +1,124 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- CSS only -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="main">
-        <nav class="navbar">
-            <div class="navbar__people">
-                <div class="people-logo">
-                    <img src="img/1.png" alt="">
-                </div>
-                <div class="people-name">Vlad Fyklev</div>
-                <div class="people-file">2390 files</div>
-                <div class="people-btn">
-                    <button type="button" class="btn btn-danger">Upload</button>
-                </div>
+
+  <div class="main">
+    <nav class="navigation p-2 bg-dark ">
+      <div class="navbar__logo mt-3">
+        <img src="img/1.png" alt="">
+      </div>
+      <div class="navbar__name mt-2 fs-4 text-light">Vlad</div>
+      <div class="navbar__files mt-2 fw-lighter text-light">2300 files</div>
+      <button type="button" class="btn btn-danger mt-2 rounded-pill">Upload</button>
+
+      <form>
+        <div class="mb-3 mt-3 ">
+          <input type="email" class="form-control bg-dark text-light" id="exampleInputEmail1"
+            aria-describedby="emailHelp" placeholder="search...">
+        </div>
+
+        <div class="categories mt-3 p-1">
+          <div class="categories__title text-light fs-4">Categories</div>
+          <div class="categories__list">
+            <div class="list-group mt-3">
+              <a href="#"
+                class="list-group-item list-group-item-action list-group-item-dark text-light fw-lighter">Photos</a>
+              <a href="#"
+                class="list-group-item list-group-item-action list-group-item-dark text-light fw-lighter">Videos</a>
+              <a href="#"
+                class="list-group-item list-group-item-action list-group-item-dark text-light fw-lighter">Project</a>
             </div>
-            <hr>
-                <div class="list__search">
-                    <input type="text" placeholder="Search filed">
-                </div>
-    
-            <div class="navbar__list">
-                <div class="categories__title"><span>Categories</span>
-                    <i class="fa-solid fa-square-plus"></i>
-                </div>
-                   <div class="list hidden">
-                        <a href="">Photos</a>
-                        <a href="">Videos</a>
-                        <a href="">Projects</a>
-                   </div>
-    
-                    <div class="categories__title albums"><span>Albums</span>
-                        <i class="fa-solid fa-square-plus btn-two"></i>
-                    </div>
-                    <div class="list-two hidden">
-                        <a href="">1</a>
-                        <a href="">2</a>
-                        <a href="">3</a>
-                        <a href="">4</a>
-                        <a href="">5</a>
-                    </div>
-            </div> 
-        </nav>
-    
-        <section class="accordion-top">
-            <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      Add photo
-                    </button>
-                  </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                     <form action="">
-                         <fieldset>
-                            <div class="form-block">
-                                <label for="id">ID:</label>
-                                <input id="id" type="text">
-                            </div>
-                            <div class="form-block">
-                                <label for="album">Album:</label>
-                                <input id="album" type="date">
-                            </div>
-                            <div class="form-block">
-                                <label for="descr">Description</label>
-                                <textarea class="texarea" name="" id="descr" ></textarea>
-                            </div>
-                            <div class="form-block">
-                                <label for="id">Url</label>
-                                <input type="url">
-                            </div>
-                            <div class="form-btn">
-                                <button type="button" class="btn btn-secondary">Cancel</button>
-                                <button type="button" class="btn btn-success">Save</button>
-                            </div>
-                            
-                            <div class="form-img">
-                                <img src="img/2.png" alt="">
-                            </div>
-                         </fieldset>
-                     </form>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Square
-                    </button>
-                  </h2>
-                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <div class="grid-container">
-                            <div class="grid-item bg-primary">
-                                <div class="hover-item">
-                                    <i class="fa-solid fa-pen"></i>
-                                    <i class="fa-solid fa-basket-shopping"></i>
-                                </div>
-                            </div>
-                            <div class="grid-item bg-secondary">
-                                <div class="hover-item">
-                                    <i class="fa-solid fa-pen"></i>
-                                    <i class="fa-solid fa-basket-shopping"></i>
-                                </div>
-                            </div>
-                            <div class="grid-item bg-success">
-                                <div class="hover-item">
-                                    <i class="fa-solid fa-pen"></i>
-                                    <i class="fa-solid fa-basket-shopping"></i>
-                                </div>
-                            </div>
-                            <div class="grid-item bg-danger">
-                                <div class="hover-item">
-                                    <i class="fa-solid fa-pen"></i>
-                                    <i class="fa-solid fa-basket-shopping"></i>
-                                </div>
-                            </div>
-                            <div class="grid-item bg-warning">
-                                <div class="hover-item">
-                                    <i class="fa-solid fa-pen"></i>
-                                    <i class="fa-solid fa-basket-shopping"></i>
-                                </div>
-                            </div>
-                            <div class="grid-item bg-info">
-                                <div class="hover-item">
-                                    <i class="fa-solid fa-pen"></i>
-                                    <i class="fa-solid fa-basket-shopping"></i>
-                                </div>
-                            </div>
-                            <div class="grid-item bg-dark">
-                                <div class="hover-item">
-                                    <i class="fa-solid fa-pen"></i>
-                                    <i class="fa-solid fa-basket-shopping"></i>
-                                </div>
-                            </div>
-                            <div class="grid-item bg-info">
-                                <div class="hover-item">
-                                    <i class="fa-solid fa-pen"></i>
-                                    <i class="fa-solid fa-basket-shopping"></i>
-                                </div>
-                            </div>
-                            <div class="grid-item bg-success">
-                                <div class="hover-item">
-                                    <i class="fa-solid fa-pen"></i>
-                                    <i class="fa-solid fa-basket-shopping"></i>
-                                </div>
-                            </div>
-                            <div class="grid-item bg-warning">
-                                <div class="hover-item">
-                                    <i class="fa-solid fa-pen"></i>
-                                    <i class="fa-solid fa-basket-shopping"></i>
-                                </div>
-                            </div>
-                        </div>
+          </div>
+        </div>
+
+        <div class="categories mt-3 p-1">
+          <div class="categories__title text-light fs-4">Albums</div>
+          <div class="categories__list">
+            <div class="list-group mt-3">
+              <a href="#"
+                class="list-group-item list-group-item-action list-group-item-dark text-light fw-lighter">1</a>
+              <a href="#"
+                class="list-group-item list-group-item-action list-group-item-dark text-light fw-lighter">2</a>
+              <a href="#"
+                class="list-group-item list-group-item-action list-group-item-dark text-light fw-lighter">3</a>
+              <a href="#"
+                class="list-group-item list-group-item-action list-group-item-dark text-light fw-lighter">4</a>
+              <a href="#"
+                class="list-group-item list-group-item-action list-group-item-dark text-light fw-lighter">5</a>
+            </div>
+          </div>
+        </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                  aria-controls="panelsStayOpen-collapseOne">
+                  #1
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                aria-labelledby="panelsStayOpen-headingOne">
+                <div class="accordion-body">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-lg-3 col-md-6 col-sm-12 mt-1">
+                        <div class="square bg-primary"></div>
+                      </div>
+                      <div class="col-lg-3 col-md-6 col-sm-12 mt-1">
+                        <div class="square bg-secondary"></div>
+                      </div>
+                      <div class="col-lg-3 col-md-6 col-sm-12 mt-1">
+                        <div class="square bg-danger"></div>
+
+                      </div>
+                      <div class="col-lg-3 col-md-6 col-sm-12 mt-1">
+                        <div class="square bg-info"></div>
+                      </div>
+                      <div class="col-lg-3 col-md-6 col-sm-12 mt-1">
+                        <div class="square mt-2 bg-secondary"></div>
+                      </div>
+                      <div class="col-lg-3 col-md-6 col-sm-12 mt-1">
+                        <div class="square mt-2 bg-info"></div>
+
+                      </div>
+                      <div class="col-lg-3 col-md-6 col-sm-12 mt-1">
+                        <div class="square mt-2 bg-danger"></div>
+
+                      </div>
+                      <div class="col-lg-3 col-md-6 col-sm-12 mt-1">
+                        <div class="square mt-2 bg-primary"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                
               </div>
-        </section>
+            </div>
+            
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
-
-
-    <!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-<script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
 </body>
+
 </html>
